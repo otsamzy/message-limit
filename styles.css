@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom left, rgb(12, 19, 79) 60%, rgb(29, 38, 125));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    background-color: white;
+    height: 200px;
+    max-width: 560px;
+    width: 100%;
+    padding: 30px;
+border-radius: 5px;
+box-shadow: 1px 1px 5px rgba(0,0,0,.7);
+position: relative;
+}
+.message-space{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+border-radius: 5px;
+padding: 2.2rem 1rem;
+border: 2px solid rgb(124, 124, 125);
+caret-color:blue;
+font-size: 1rem;
+color: grey;
+overflow: hidden;
+
+}
+.message-space::placeholder{
+    font-size: 1rem;
+    color: grey;
+    text-transform: capitalize;
+}
+
+.message-space:focus,
+.message-space:valid{
+    border: 2px solid blue;
+}
+.input.error .message-space{
+    border: 2px solid red;
+}
+.input .title{
+    text-transform: capitalize;
+    position: absolute;
+    top: 40px;
+    left: 45px;
+    color: blue;
+}
+.input.error .title{
+    color: red;
+}
+
+.input .character{
+    position: absolute;
+    bottom: 35px;
+    right: 45px;
+    display: flex;
+   color:blue;
+   display: none;
+}
+
+.input.active .character{
+    display: block;
+}
+.input.error .character{
+    color: red;
+}
